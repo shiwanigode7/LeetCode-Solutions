@@ -1,0 +1,18 @@
+/** 
+Given an integer x, return true if x is a palindrome, and false otherwise.
+Ex. 121 is palindrome number, -121 is not palindrome number
+*/
+class Solution {
+    public boolean isPalindrome(int x) {
+        int providedNumber = x, remainder = 0, reversedNumber =0;
+        for(int i=0; x != 0; i++) {
+            remainder = x % 10;
+            reversedNumber = reversedNumber * 10 + remainder;
+            x /= 10;
+        }
+        if((providedNumber == reversedNumber) && (providedNumber > -1))
+            return true;
+        else
+            return false;
+    }
+}
